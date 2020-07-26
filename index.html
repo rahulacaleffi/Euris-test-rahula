@@ -57,16 +57,17 @@
                         </span>
                     </button>
                 </span>
-            </div>    <div class="app-header__content">
-                <div class="app-header-left">
+            </div>
+            <div class="app-header__content">
+                <!-- <div class="app-header-left">
                     <div class="search-wrapper">
                         <div class="input-holder">
-                            <input type="text" class="search-input" placeholder="Search for specific product">
+                            <input type="text" class="search-input" placeholder="Search for specific title product">
                             <button class="search-icon"><span></span></button>
                         </div>
                         <button class="close"></button>
                     </div>
-                </div>
+                </div> -->
                 <div class="app-header-right">
                     <div class="header-btn-lg pr-0">
                         <div class="widget-content p-0">
@@ -141,7 +142,7 @@
                                 </li>
                                 <li class="app-sidebar__heading">CATEGORIES</li>
                                     <li>
-                                        <a href="index.html#categories">
+                                        <a href="categories.html">
                                             <i class="metismenu-icon pe-7s-plus"></i>
                                             Display categories
                                         </a>
@@ -214,6 +215,13 @@
                                 </div>
                             </div>
                             <div class="card-header">Products
+                                    <div class="search-wrapper" style="margin-left: 30px;">
+                                            <div class="input-holder">
+                                                <input type="text"  onkeyup="filterFunction()" id="searchproduct" class="search-input" placeholder="Search for specific product">
+                                                <button class="search-icon"><span></span></button>
+                                            </div>
+                                            <button class="close"></button>
+                                    </div>
                                     <div class="btn-actions-pane-right">
                                         <div role="group" class="btn-group-sm btn-group">
                                             <button class="btn btn-success"><i class="metismenu-icon pe-7s-plus"></i> Add new</button>
@@ -274,7 +282,7 @@
                     <div class="app-wrapper-footer">
                         <div class="app-footer">
                             <div class="app-footer__inner">
-                                Created by Rahula
+                                Created by Rahula Palu Caleffi
                             </div>
                         </div>
                     </div>
@@ -323,6 +331,9 @@
                 var rowgrid = document.getElementById('rowgrid');
                 
                 data.forEach(function(object) {
+                    if (typeof object.data.reviews == 'undefined'){
+                        object.data.reviews = "0";
+                    }
                     var tr = document.createElement('tr');
                     tr.innerHTML = '<td class="\text-center\">' + object.id + '</td>' +
                     '<td class=\"text-left\">' + object.data.title + '</td>' +
@@ -356,6 +367,53 @@
         </script>
 
         <!-- END SCRIPT LISTENER -->
+
+        <!-- FILTER ON SEARCH  -->
+        <script>
+                function filterFunction() {
+                  var input, filter, table, tr, td, i, txtValue, rowgrid, divs, h5;
+                  input = document.getElementById("searchproduct");
+                  filter = input.value.toUpperCase();
+                    
+                //   for table
+                  table = document.getElementById("table-products");
+                  tr = table.getElementsByTagName("tr");
+                  for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[1];
+                    if (td) {
+                      txtValue = td.textContent || td.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                      } else {
+                        tr[i].style.display = "none";
+                      }
+                    }       
+                  }
+
+                //   for grid 
+                rowgrid = document.getElementById('rowgrid');
+                divs = rowgrid.getElementsByClassName("col-md-4");
+                for (i = 0; i < divs.length; i++) {
+                    h5 = divs[i].getElementsByClassName("card-title")[0];
+                    if (h5) {
+                      txtValue = h5.textContent || h5.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        divs[i].style.display = "";
+                      } else {
+                        divs[i].style.display = "none";
+                      }
+                    }       
+                  }
+
+
+
+
+                
+                }
+                </script>
+        <!-- END FILTER ON SEARCH -->
+
+
 <script type="text/javascript" src="./assets/scripts/main.js"></script>
 
 
