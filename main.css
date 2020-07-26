@@ -10388,11 +10388,11 @@ button,
 }
 
 .app-header.header-text-light .search-wrapper.active .input-holder {
-    background: rgba(255, 255, 255, 0.1)
+    background: rgba(255, 255, 255, 0.9)
 }
 
 .app-header.header-text-light .search-wrapper.active .input-holder .search-input {
-    color: rgba(255, 255, 255, 0.8)
+    color: rgba(0, 0, 0, 0.8)
 }
 
 .app-header.header-text-light .search-wrapper.active .input-holder .search-icon {
@@ -10490,7 +10490,7 @@ button,
 }
 
 .app-header.header-text-dark .search-wrapper.active .input-holder .search-input {
-    color: white;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .app-header.header-text-dark .search-wrapper.active .input-holder .search-icon {
@@ -14529,6 +14529,7 @@ body {
 
 .btn-outline-info {
     color: #16aaff;
+    font-size: 14px !important;
     border-color: #16aaff
 }
 
