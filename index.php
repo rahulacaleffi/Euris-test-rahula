@@ -11,7 +11,6 @@
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
 
-    
     <link rel="icon" type="image/x-icon" href="https://www.euris.it/dist/images/favicon/favicon.ico">
     <link rel="Shortcut Icon" type="image/x-icon" href="https://www.euris.it/dist/images/favicon/favicon.ico">
     <!--
@@ -27,143 +26,13 @@
 <link href="./main.css" rel="stylesheet"></head>
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-        <div class="app-header header-shadow bg-heavy-rain header-text-dark">
-            <div class="app-header__logo">
-                <img class="logoheader" id="logo" src="https://www.euris.it/dist/images/logo_euris.jpg" width="87" height="33">
-                <div class="header__pane ml-auto">
-                    <div>
-                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="app-header__mobile-menu">
-                <div>
-                    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
-                    </button>
-                </div>
-            </div>
-            <div class="app-header__menu">
-                <span>
-                    <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                        <span class="btn-icon-wrapper">
-                            <i class="fa fa-ellipsis-v fa-w-6"></i>
-                        </span>
-                    </button>
-                </span>
-            </div>
-            <div class="app-header__content">
-                <!-- <div class="app-header-left">
-                    <div class="search-wrapper">
-                        <div class="input-holder">
-                            <input type="text" class="search-input" placeholder="Search for specific title product">
-                            <button class="search-icon"><span></span></button>
-                        </div>
-                        <button class="close"></button>
-                    </div>
-                </div> -->
-                <div class="app-header-right">
-                    <div class="header-btn-lg pr-0">
-                        <div class="widget-content p-0">
-                            <div class="widget-content-wrapper">
-                                <div class="widget-content-left">
-                                    <div class="btn-group">
-                                        <a class="p-0 btn">
-                                            <img width="42" class="rounded-circle" src="https://2.gravatar.com/avatar/ec4f032bb9917b284639f7783fcac683?s=400&d=mm" alt="">
-                                            
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="widget-content-left  ml-3 header-user-info">
-                                    <div class="widget-heading">
-                                        Rahula Palu Caleffi
-                                    </div>
-                                    <div class="widget-subheading">
-                                        Front end developer
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>        </div>
-            </div>
-        </div>
-        <div class="app-main">
-                <div class="app-sidebar sidebar-shadow bg-dark sidebar-text-light">
-                    <div class="app-header__logo">
-                        <div class="logo-src"></div>
-                        <div class="header__pane ml-auto">
-                            <div>
-                                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
-                                    <span class="hamburger-box">
-                                        <span class="hamburger-inner"></span>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="app-header__mobile-menu">
-                        <div>
-                            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="app-header__menu">
-                        <span>
-                            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                                <span class="btn-icon-wrapper">
-                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
-                                </span>
-                            </button>
-                        </span>
-                    </div>    <div class="scrollbar-sidebar">
-                        <div class="app-sidebar__inner">
-                            <ul class="vertical-nav-menu">
-                                <li class="app-sidebar__heading">Dashboards</li>
-                                <li>
-                                    <a href="index.html" class="mm-active">
-                                        <i class="metismenu-icon pe-7s-box2"></i>
-                                        Products
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="index.html#create">
-                                        <i class="metismenu-icon pe-7s-plus"></i>
-                                        Create product
-                                    </a>
-                                </li>
-                                <li class="app-sidebar__heading">CATEGORIES</li>
-                                    <li>
-                                        <a href="categories.html">
-                                            <i class="metismenu-icon pe-7s-plus"></i>
-                                            Display categories
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html#categories">
-                                            <i class="metismenu-icon pe-7s-plus"></i>
-                                            Charts
-                                        </a>
-                                    </li>                                
-                                <li class="app-sidebar__heading">STORES</li>
-                                <li>
-                                    <a href="components-tabs.html">
-                                        <i class="metismenu-icon pe-7s-home"></i>
-                                        Show stores
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        
+        <!-- HEADER  -->
+        <?php
+            require_once 'header.php';
+        ?>
+        <!-- END HEADER -->
+
                 <div class="app-main__outer">
                     <div class="app-main__inner">
                         <div class="app-page-title">
@@ -192,6 +61,20 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <div class="col-lg-6 col-xl-4">
+                                    <div class="card mb-3 widget-content">
+                                        <div class="widget-content-wrapper">
+                                            <div class="widget-content-left">
+                                                <div class="widget-heading">Categories</div>
+                                                <div class="widget-subheading">Total of product's categories</div>
+                                            </div>
+                                            <div class="widget-content-right">
+                                                <div class="widget-numbers text-primary" id="count_categories"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                         
 
@@ -224,7 +107,7 @@
                                     </div>
                                     <div class="btn-actions-pane-right">
                                         <div role="group" class="btn-group-sm btn-group">
-                                            <button class="btn btn-success"><i class="metismenu-icon pe-7s-plus"></i> Add new</button>
+                                            <button class="btn btn-success" data-toggle="modal" data-target="#addnew_product"><i class="metismenu-icon pe-7s-plus"></i> Add new</button>
                                         </div>
                                     </div>
                                 </div>
@@ -279,16 +162,14 @@
 
 
                     <!-- FOOTER -->
-                    <div class="app-wrapper-footer">
-                        <div class="app-footer">
-                            <div class="app-footer__inner">
-                                Created by Rahula Palu Caleffi
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        require_once 'footer.php';
+                    ?>
                     <!-- END FOOTER -->
+
+
+                    
             </div>
-            <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         </div>
     </div>
 
@@ -307,22 +188,39 @@
             function get_json_data(){
                 // Relative URL of external json file
                 var json_url = 'http://us-central1-test-b7665.cloudfunctions.net/api/stores/ijpxNJLM732vm8AeajMR/products';
-    
+                var json_categ = 'http://us-central1-test-b7665.cloudfunctions.net/api/stores/ijpxNJLM732vm8AeajMR/stats/categories';
+
                 //Build the XMLHttpRequest (aka AJAX Request)
-                xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function() { 
-                    if (this.readyState == 4 && this.status == 200) {//when a good response is given do this
-    
-                        var data = JSON.parse(this.responseText); // convert the response to a json object
-                        append_json(data);// pass the json object to the append_json function
+                    xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() { 
+                        if (this.readyState == 4 && this.status == 200) {//when a good response is given do this
+        
+                            var data = JSON.parse(this.responseText); // convert the response to a json object
+                            append_json(data);// pass the json object to the append_json function
+                        }
                     }
-                }
-                //set the request destination and type
-                xmlhttp.open("GET", json_url, true);
-                //set required headers for the request
-                xmlhttp.setRequestHeader("Content-type", "application/json");
-                // send the request
-                xmlhttp.send(); // when the request completes it will execute the code in onreadystatechange section
+                    //set the request destination and type
+                    xmlhttp.open("GET", json_url, true);
+                    //set required headers for the request
+                    xmlhttp.setRequestHeader("Content-type", "application/json");
+                    // send the request
+                    xmlhttp.send(); // when the request completes it will execute the code in onreadystatechange section
+
+                //Build the XMLHttpRequest (aka AJAX Request)
+                    xmlhttpcateg = new XMLHttpRequest();
+                    xmlhttpcateg.onreadystatechange = function() { 
+                        if (this.readyState == 4 && this.status == 200) {//when a good response is given do this
+        
+                            var datacateg = JSON.parse(this.responseText); // convert the response to a json object
+                            append_json_categ(datacateg);// pass the json object to the append_json function
+                        }
+                    }
+                    //set the request destination and type
+                    xmlhttpcateg.open("GET", json_categ, true);
+                    //set required headers for the request
+                    xmlhttpcateg.setRequestHeader("Content-type", "application/json");
+                    // send the request
+                    xmlhttpcateg.send(); // when the request completes it will execute the code in onreadystatechange section
             }
     
             //this function appends the json data to the table and the grid
@@ -341,7 +239,7 @@
                     '<td class=\"text-center\">' + object.data.description.substr(0,25) + '...</td>' +
                     '<td class=\"text-center\">' + object.data.employee + '</td>' +
                     '<td class=\"text-center\">' + object.data.reviews + '</td>' +
-                    '<td class=\"text-center\"><button class=\"mb-2 mr-2 btn-transition btn btn-outline-info\">Edit</button></td>';
+                    '<td class=\"text-center\"><button class=\"mb-2 mr-2 btn-transition btn btn-outline-danger\">Delete</button></td>';
                     table.appendChild(tr);
 
                     var col = document.createElement('div');
@@ -351,7 +249,7 @@
                         '<span><strong>Description:</strong> '+ object.data.description.substr(0,100) +'...</span><br>' +
                         '<span><strong>Employee:</strong> '+ object.data.employee +'</span><br>' +
                         '<span><strong>Reviews: <i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i></strong> '+ object.data.reviews +'</span><br>' +
-                        '<span><button class=\"mb-2 mr-2 btn-transition btn btn-outline-info\">Edit</button></span>' +
+                        '<span><button class=\"mb-2 mr-2 btn-transition btn btn-outline-danger\">Delete</button></span>' +
                         '</div>';
                     rowgrid.appendChild(col);
                 });
@@ -364,10 +262,60 @@
                 div.appendChild(count);
                 
             }
+
+
+            //this function returns categories
+            function append_json_categ(data){
+
+                //filling the categories counter
+                var div = document.getElementById('count_categories');
+                var count = document.createElement('span');
+                count.innerHTML = Object.keys(data).length;
+                div.appendChild(count);
+                
+            }
         </script>
 
         <!-- END SCRIPT LISTENER -->
 
+
+        <!-- SCRIPT ADD PRODUCT -->
+        <?php
+
+            if(isset($_POST['submitproduct'])){
+                ?>
+                     <script>
+
+                        // USING FETCH TO SEND A REQUEST 
+                        var myHeaders = new Headers();
+                        myHeaders.append("Content-Type", "application/json");
+
+                        var raw = JSON.stringify({"title":<?php echo json_encode($_POST['title']) ?>,"category":<?php echo json_encode($_POST['category']) ?>,"price":<?php echo json_encode($_POST['price']) ?>,"employee":<?php echo json_encode($_POST['employee']) ?>,"description":<?php echo json_encode($_POST['description']) ?>});
+
+                        var requestOptions = {
+                        method: 'POST',
+                        headers: myHeaders,
+                        body: raw,
+                        redirect: 'follow'
+                        };
+
+                        fetch("http://us-central1-test-b7665.cloudfunctions.net/api/stores/ijpxNJLM732vm8AeajMR/products", requestOptions)
+                        .then(response => response.text())
+                        .then(result => {
+                            console.log(result);
+                            alert('Product added with Success');
+                            window.location.replace('index.php');
+                        })
+                        .catch(error => console.log('error', error));
+
+                    </script>
+                <?php
+            }
+        ?>
+       
+        
+        <!-- END SCRIPT ADD PRODUCT -->
+        
         <!-- FILTER ON SEARCH  -->
         <script>
                 function filterFunction() {
@@ -404,18 +352,15 @@
                       }
                     }       
                   }
-
-
-
-
                 
                 }
                 </script>
         <!-- END FILTER ON SEARCH -->
 
-
+<?php
+    require_once 'modals.php';
+?>
 <script type="text/javascript" src="./assets/scripts/main.js"></script>
-
 
 
 </body>
