@@ -2707,6 +2707,15 @@ textarea.form-control.is-invalid {
     }
 }
 
+.cezoom{
+    transition: all 400ms linear 0s !important;
+}
+.cezoom:hover{
+    -ms-transform: scale(1.07); /* IE 9 */
+    -webkit-transform: scale(1.07); /* Safari 3-8 */
+    transform: scale(1.07);
+}
+
 .btn:hover {
     color: #495057;
     text-decoration: none

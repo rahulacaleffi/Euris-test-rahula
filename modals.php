@@ -47,36 +47,65 @@
                                             <input type="text" name="description" class="form-control" placeholder="Description" required>
                                         </div>
                                     </div>
-                                    <button class="btn btn-primary" type="submit" name="submitproduct">Submit</button>
+                                    <div class="widget-content-right">
+                                        <button class="btn btn-success" type="submit" name="submitproduct" style="float:right;">Create Product</button>
+                                    </div>
+                                    
                                 </form> 
                             </div>
                         </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
         </div>
     </div>
 </div>
 
-<!-- DELETE -->
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" id="deleteModal" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- DELETE PRODUCT CONFIRMATION -->
+<script type="text/javascript">
+function JSconfirm(id){
+	swal({ 
+    title: "Are you sure!",   
+    text: "Are you sure to delete this product?",   
+    type: "warning",   
+    showCancelButton: true,   
+    confirmButtonColor: "#DD6B55",   
+    confirmButtonText: "Yes",   
+    cancelButtonText: "No",   
+    closeOnConfirm: false,   
+    closeOnCancel: false }, 
+    function(isConfirm){   
+        if (isConfirm) 
+        {   
+            // START SCRIPT DELETE
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            var raw = "";
+
+            var requestOptions = {
+            method: 'DELETE',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+            };
+
+            fetch("http://us-central1-test-b7665.cloudfunctions.net/api/stores/ijpxNJLM732vm8AeajMR/products/"+id, requestOptions)
+            .then(response => response.text())
+            .then(result => {
+                            console.log(result);
+                            alert('Product deleted');
+                            window.location.replace('index.php');
+                        })
+            .catch(error => {
+                console.log('error', error);
+                swal("Not deleted. Error:"+error);
+                });
+            // END SCRIPT DELETE
+            
+            
+        } 
+        else {     
+            swal("You canceled the operation.");   
+        } 
+    });
+}
+</script>

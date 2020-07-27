@@ -11,6 +11,10 @@
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
 
+    <!-- STYLISH CONFIRM AND ALERTS -->
+    <link rel="stylesheet" href="./assets/scripts/sweetalert.css">
+    <script src="./assets/scripts/sweetalert.min.js"></script>
+
     <link rel="icon" type="image/x-icon" href="https://www.euris.it/dist/images/favicon/favicon.ico">
     <link rel="Shortcut Icon" type="image/x-icon" href="https://www.euris.it/dist/images/favicon/favicon.ico">
     <!--
@@ -39,7 +43,9 @@
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
                                     <div class="page-title-icon">
-                                        <img src="assets/images/products.png" alt="Products" width="40"/>
+                                        <a href="index.php">
+                                            <img src="assets/images/products.png" alt="Products" width="40"/>
+                                        </a>
                                     </div>
                                     <div>Employees Dashboard
                                         <div class="page-title-subheading">Here you can create, display and delete products from store ID <q>ijpxNJLM732vm8AeajMR</q>
@@ -50,7 +56,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-xl-4">
-                                <div class="card mb-3 widget-content bg-midnight-bloom">
+                                <div class="card mb-3 cezoom widget-content bg-midnight-bloom">
                                     <div class="widget-content-wrapper text-white">
                                         <div class="widget-content-left">
                                             <div class="widget-heading">Total Products on this shop</div>
@@ -63,7 +69,7 @@
                             </div>
                             
                             <div class="col-lg-6 col-xl-4">
-                                    <div class="card mb-3 widget-content">
+                                    <div class="card mb-3 cezoom widget-content">
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left">
                                                 <div class="widget-heading">Categories</div>
@@ -107,7 +113,7 @@
                                     </div>
                                     <div class="btn-actions-pane-right">
                                         <div role="group" class="btn-group-sm btn-group">
-                                            <button class="btn btn-success" data-toggle="modal" data-target="#addnew_product"><i class="metismenu-icon pe-7s-plus"></i> Add new</button>
+                                            <button class="btn btn-success cezoom" data-toggle="modal" data-target="#addnew_product"><i class="metismenu-icon pe-7s-plus"></i> Add new</button>
                                         </div>
                                     </div>
                                 </div>
@@ -123,7 +129,7 @@
                                         <div class="col-md-12">
                                                 <div class="main-card mb-3 card">
                                                     <div class="table-responsive">
-                                                        <table class="align-middle mb-0 table table-borderless table-striped table-hover" id="table-products">
+                                                        <table class="align-middle mb-0 table table-bordered table-striped table-hover " id="table-products">
                                                             <thead>
                                                             <tr>
                                                                 <th class="text-center">#ID</th>
@@ -172,9 +178,6 @@
             </div>
         </div>
     </div>
-
-
-
 
 
 
@@ -233,13 +236,13 @@
                         object.data.reviews = "0";
                     }
                     var tr = document.createElement('tr');
-                    tr.innerHTML = '<td class="\text-center\">' + object.id + '</td>' +
+                    tr.innerHTML = '<td class=\"text-center\">' + object.id + '</td>' +
                     '<td class=\"text-left\">' + object.data.title + '</td>' +
                     '<td class=\"text-center\">' + object.data.category + '</td>' +
                     '<td class=\"text-center\">' + object.data.description.substr(0,25) + '...</td>' +
                     '<td class=\"text-center\">' + object.data.employee + '</td>' +
                     '<td class=\"text-center\">' + object.data.reviews + '</td>' +
-                    '<td class=\"text-center\"><button class=\"mb-2 mr-2 btn-transition btn btn-outline-danger\">Delete</button></td>';
+                    '<td class=\"text-center\"><button class=\"mb-2 cezoom mr-2 btn-transition btn btn-outline-danger\" onclick=\"JSconfirm(\''+ object.id + '\')\">Delete</button></td>';
                     table.appendChild(tr);
 
                     var col = document.createElement('div');
@@ -249,7 +252,7 @@
                         '<span><strong>Description:</strong> '+ object.data.description.substr(0,100) +'...</span><br>' +
                         '<span><strong>Employee:</strong> '+ object.data.employee +'</span><br>' +
                         '<span><strong>Reviews: <i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i><i class=\"fa fa-star\" aria-hidden=\"true\"></i></strong> '+ object.data.reviews +'</span><br>' +
-                        '<span><button class=\"mb-2 mr-2 btn-transition btn btn-outline-danger\">Delete</button></span>' +
+                        '<span><button class=\"mb-2 mr-2 btn-transition cezoom btn btn-outline-danger\" onclick=\"JSconfirm(\''+ object.id +'\')\">Delete</button></span>' +
                         '</div>';
                     rowgrid.appendChild(col);
                 });
@@ -360,7 +363,10 @@
 <?php
     require_once 'modals.php';
 ?>
-<script type="text/javascript" src="./assets/scripts/main.js"></script>
+
+
+    <!-- Main JS -->
+    <script type="text/javascript" src="./assets/scripts/main.js"></script>
 
 
 </body>

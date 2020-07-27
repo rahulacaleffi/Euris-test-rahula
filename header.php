@@ -1,7 +1,7 @@
 <div class="app-header header-shadow bg-heavy-rain header-text-dark">
         <div class="app-header__logo">
             <a href="index.php">
-                <img class="logoheader" id="logo" src="https://www.euris.it/dist/images/logo_euris.jpg" width="87" height="33">
+                <img class="logoheader cezoom" id="logo" src="https://www.euris.it/dist/images/logo_euris.jpg" width="87" height="33">
             </a>
             <div class="header__pane ml-auto">
                 <div>
@@ -47,8 +47,8 @@
                         <div class="widget-content-wrapper">
                             <div class="widget-content-left">
                                 <div class="btn-group">
-                                    <a class="p-0 btn">
-                                        <img width="42" class="rounded-circle" src="https://2.gravatar.com/avatar/ec4f032bb9917b284639f7783fcac683?s=400&d=mm" alt="">
+                                    <a class="p-0 btn" href="https://github.com/rahulacaleffi/" target="_blank">
+                                        <img width="42" class="rounded-circle cezoom" src="https://2.gravatar.com/avatar/ec4f032bb9917b284639f7783fcac683?s=400&d=mm" alt="">
                                         
                                     </a>
                                 </div>
@@ -101,34 +101,34 @@
                     <div class="app-sidebar__inner">
                         <ul class="vertical-nav-menu">
                             <li class="app-sidebar__heading">Dashboards</li>
-                            <li>
+                            <li class="cezoom">
                                 <a href="index.php">
                                     <i class="metismenu-icon pe-7s-box2"></i>
                                     Products
                                 </a>
                             </li>
-                            <li>
+                            <li class="cezoom">
                                 <a href="index.php#create" data-toggle="modal" data-target="#addnew_product">
                                     <i class="metismenu-icon pe-7s-plus"></i>
                                     Create product
                                 </a>
                             </li>
                             <li class="app-sidebar__heading">CATEGORIES</li>
-                                <li>
+                                <li class="cezoom">
                                     <a href="categories.php">
                                         <i class="metismenu-icon pe-7s-albums"></i>
                                         Display categories
                                     </a>
                                 </li>
-                                <li>
+                                <li class="cezoom">
                                     <a href="categories.php#charts">
                                         <i class="metismenu-icon pe-7s-graph1"></i>
                                         Charts
                                     </a>
                                 </li>                                
                             <li class="app-sidebar__heading">STORES</li>
-                            <li>
-                                <a href="components-tabs.html">
+                            <li class="cezoom">
+                                <a href="stores.php">
                                     <i class="metismenu-icon pe-7s-home"></i>
                                     Show stores
                                 </a>
