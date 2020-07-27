@@ -1,7 +1,7 @@
 <div class="app-header header-shadow bg-heavy-rain header-text-dark">
         <div class="app-header__logo">
             <a href="index.php">
-                <img class="logoheader cezoom" id="logo" src="https://www.euris.it/dist/images/logo_euris.jpg" width="87" height="33">
+                <img class="logoheader cezoom" id="logo" src="/assets/images/logo_euris.jpg" width="87" height="33">
             </a>
             <div class="header__pane ml-auto">
                 <div>

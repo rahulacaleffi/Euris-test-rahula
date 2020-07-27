@@ -11,8 +11,8 @@
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
 
-    <link rel="icon" type="image/x-icon" href="https://www.euris.it/dist/images/favicon/favicon.ico">
-    <link rel="Shortcut Icon" type="image/x-icon" href="https://www.euris.it/dist/images/favicon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="Shortcut Icon" type="image/x-icon" href="/assets/images/favicon.ico">
     <!--
     =========================================================
     * ArchitectUI HTML Theme Dashboard - v1.0.0
